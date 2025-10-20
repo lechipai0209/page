@@ -1,0 +1,76 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 85%;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Mobile responsive - use full width on small screens */
+@media (max-width: 968px) {
+  .main-content {
+    max-width: 100%;
+  }
+}
+
+
+.footer {
+  background: #d5d9e0;
+  color: #2c3e50;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: auto;
+  width: 100%;
+  border-top: 1px solid #b0b8c0;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+.footer-separator {
+  margin: 0 0.5rem;
+  opacity: 0.5;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f7fa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e0;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #90a4ae;
+}
+
+/* Selection color */
+::selection {
+  background: #78909c;
+  color: white;
+}
+
+::-moz-selection {
+  background: #78909c;
+  color: white;
+}

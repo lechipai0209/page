@@ -1,0 +1,416 @@
+.education {
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+}
+
+.education-card {
+  background: white;
+  border-radius: 0;
+  padding: 1.8rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e1e4e8;
+}
+
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e1e4e8;
+  gap: 1rem;
+}
+
+.university {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+  font-weight: 600;
+}
+
+.university-link {
+  color: #2c3e50;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.university-link:hover {
+  color: #78909c;
+  border-bottom-color: #78909c;
+}
+
+.degree {
+  color: #718096;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.period {
+  color: #78909c;
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.edu-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.research-section {
+  margin-top: 0;
+}
+
+.research-title {
+  font-size: 1.3rem;
+  color: #2d3748;
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.research-item {
+  padding: 1.5rem;
+  background: #f7fafc;
+  border-radius: 2px;
+  border: 1px solid #e1e4e8;
+  transition: all 0.15s ease;
+}
+
+.research-item:hover {
+  background: #edf2f7;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.research-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.research-header-left {
+  flex: 1;
+}
+
+.research-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.research-header h5 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.expand-icon {
+  font-size: 1.3rem;
+  color: #546e7a;
+  font-weight: 300;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f7fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+}
+
+.research-item.expanded .expand-icon {
+  background: #2c3e50;
+  color: white;
+  border-color: #2c3e50;
+  transform: rotate(180deg);
+}
+
+.research-topic {
+  color: #546e7a;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.research-topic strong {
+  font-weight: 600;
+}
+
+.research-description {
+  color: #4a5568;
+  margin: 0.5rem 0 0 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.research-link {
+  color: #78909c;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.research-link:hover {
+  color: #546e7a;
+  border-bottom-color: #546e7a;
+}
+
+/* Research Content - collapsible */
+.research-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin-top 0.3s ease;
+  opacity: 0;
+}
+
+.research-item.expanded .research-content {
+  max-height: 10000px;
+  opacity: 1;
+  margin-top: 1.5rem;
+}
+
+/* Research Details */
+.research-details {
+  padding-top: 1.5rem;
+  border-top: 1px solid #e1e4e8;
+}
+
+/* Horizontal layout: text left, image right */
+.detail-row-horizontal {
+  display: flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.detail-text-section {
+  flex: 1;
+}
+
+.detail-intro {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.detail-steps {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 1rem 0 1rem 1.5rem;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.detail-steps li {
+  margin-bottom: 0.5rem;
+}
+
+.detail-result {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 1rem 0 0 0;
+  font-size: 0.95rem;
+}
+
+.detail-image-section {
+  flex: 0 0 50%;
+  max-width: 600px;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 英文版縮小圖片 */
+.detail-row-horizontal.has-work-section .detail-image-section {
+  flex: 0 0 30%;
+  max-width: 300px;
+}
+
+.detail-image-section img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.detail-image-section img:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+}
+
+.work-subtitle {
+  font-size: 1.2rem;
+  color: #2d3748;
+  margin: 2rem 0 1rem 0;
+  font-weight: 600;
+}
+
+.work-intro {
+  color: #4a5568;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.work-items {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 1rem 0 1rem 1.5rem;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.work-items li {
+  margin-bottom: 0.8rem;
+}
+
+.work-final-result {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 1rem 0 0 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Work section full-width below image (new structure for English) */
+.work-section-full {
+  width: 100%;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e1e4e8;
+}
+
+.work-section-full .work-subtitle {
+  margin-top: 0;
+}
+
+/* Full width layout without image */
+.detail-text-full {
+  width: 100%;
+}
+
+.detail-main-research {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+.detail-implementation {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 1rem 0 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.detail-algorithms {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0.5rem 0 1rem 1.5rem;
+  padding: 0;
+  font-size: 0.95rem;
+}
+
+.detail-algorithms li {
+  margin-bottom: 0.5rem;
+}
+
+.detail-extension {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 3rem 1rem;
+  }
+
+  .education-card {
+    padding: 1.5rem;
+  }
+
+  .edu-header {
+    flex-direction: column;
+  }
+
+  .university {
+    font-size: 1.4rem;
+  }
+
+  .period {
+    align-self: flex-start;
+  }
+
+  .edu-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .research-item {
+    padding: 1rem;
+  }
+
+  .research-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .research-header-right {
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+  }
+
+  .detail-row-horizontal {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .detail-image-section {
+    flex: none;
+    max-width: 100%;
+  }
+}

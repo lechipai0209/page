@@ -1,0 +1,83 @@
+.about-me {
+  padding: 3.5rem 2rem;
+  background: white;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  color: #2c3e50;
+  margin-bottom: 2.5rem;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.about-me-card {
+  background: white;
+  border-radius: 0;
+  padding: 2.5rem 3rem;
+  border: 1px solid #e1e4e8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.about-introduction {
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin: 0;
+  text-align: justify;
+  font-weight: 600;
+}
+
+.about-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-highlights li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #4a5568;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.about-highlights li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #78909c;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.about-highlights li:hover {
+  background: #f7fafc;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .about-me {
+    padding: 3rem 1rem;
+  }
+
+  .about-me-card {
+    padding: 1.8rem 1.5rem;
+  }
+
+  .about-introduction {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .about-highlights li {
+    font-size: 0.9rem;
+  }
+}
