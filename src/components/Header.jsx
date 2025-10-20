@@ -53,7 +53,13 @@ function Header() {
         <div className="header-content">
           <h1 className="name">{headerContent.name}</h1>
           <div className="contact-info">
-            <a href="https://github.com/chi-white" target="_blank" rel="noopener noreferrer" className="contact-link">
+            <a
+              href="https://github.com/lechipai0209"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-link github-link"
+              data-tooltip="Hi all, I'm Kim. My original Github account chi-white was just blocked by Github official and currently under appeal. Now this is my temporary account."
+            >
               <span className="icon">🔗</span> {headerContent.links.github}
             </a>
             <a href="mailto:king0209king0209@gmail.com" className="contact-link">

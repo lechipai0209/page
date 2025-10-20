@@ -36,7 +36,19 @@ function SideProjects() {
               <div className="card-header" onClick={() => toggleExpand(index)}>
                 <div className="header-left">
                   <div className="title-row">
-                    <h3 className="project-name">{project.name}</h3>
+                    {project.link && project.name !== 'Medium Technical Blog' && project.name !== 'Medium 技術部落格' ? (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-name-link"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <h3 className="project-name">{project.name}</h3>
+                      </a>
+                    ) : (
+                      <h3 className="project-name">{project.name}</h3>
+                    )}
                     {project.status && project.name !== 'Medium Technical Blog' && project.name !== 'Medium 技術部落格' && (
                       <span className={`status-badge ${project.status.toLowerCase()}`}>
                         {project.status}
@@ -44,7 +56,7 @@ function SideProjects() {
                     )}
                   </div>
                   <p className="project-description">{project.description}</p>
-                  {project.link && (
+                  {project.link && (project.name === 'Medium Technical Blog' || project.name === 'Medium 技術部落格') && (
                     <a
                       href={project.link}
                       target="_blank"
@@ -78,8 +90,82 @@ function SideProjects() {
                 {/* Detailed content section */}
                 {project.detailedContent && (
                   <div className="project-details">
+                    {/* Chain-Split structure: intro + architectureImage + challenges */}
+                    {project.detailedContent.architectureImage && (
+                      <>
+                        <p className="detail-paragraph" dangerouslySetInnerHTML={{ __html: formatText(project.detailedContent.intro) }}></p>
+
+                        <div className="detail-images">
+                          <div className="detail-image-wrapper large">
+                            <img src={project.detailedContent.architectureImage} alt={`${project.name} Architecture`} />
+                          </div>
+                        </div>
+
+                        {project.detailedContent.challenges && (
+                          <div className="challenges-section">
+                            <h4 className="section-subtitle">{language === 'en' ? 'Challenges & Solutions' : '問題與挑戰'}</h4>
+                            {project.detailedContent.challenges.map((challenge, i) => (
+                              <div key={i} className="challenge-item">
+                                <h5 className="challenge-title">{challenge.title}</h5>
+
+                                {challenge.highlight && (
+                                  <div className="challenge-highlight" dangerouslySetInnerHTML={{ __html: formatText(challenge.highlight) }}></div>
+                                )}
+
+                                <div className="challenge-section no-margin">
+                                  <strong>{language === 'en' ? 'Problem:' : '問題：'}</strong>
+                                  <p dangerouslySetInnerHTML={{ __html: formatText(challenge.problem) }}></p>
+                                </div>
+
+                                {challenge.problemImages && challenge.problemImages.length > 0 && (
+                                  <div className="detail-images">
+                                    {challenge.problemImages.map((img, j) => (
+                                      <div key={j} className="detail-image-wrapper">
+                                        <img src={img.src} alt={img.alt} />
+                                      </div>
+                                    ))}
+                                  </div>
+                                )}
+
+                                <div className="solution-with-image">
+                                  <div className="solution-left-column">
+                                    <div className="challenge-section solution-text">
+                                      <strong>{language === 'en' ? 'Solution:' : '解決方式：'}</strong>
+                                      <p dangerouslySetInnerHTML={{ __html: formatText(challenge.solution) }}></p>
+                                      {challenge.checks && (
+                                        <ol className="challenge-checks">
+                                          {challenge.checks.map((check, j) => (
+                                            <li key={j}>{check}</li>
+                                          ))}
+                                        </ol>
+                                      )}
+                                    </div>
+                                    {challenge.result && (
+                                      <div className="challenge-section result-text">
+                                        <strong>{language === 'en' ? 'Result:' : '結果：'}</strong>
+                                        <p dangerouslySetInnerHTML={{ __html: formatText(challenge.result) }}></p>
+                                      </div>
+                                    )}
+                                  </div>
+                                  {challenge.solutionImages && challenge.solutionImages.length > 0 && (
+                                    <div className="solution-image">
+                                      {challenge.solutionImages.map((img, j) => (
+                                        <div key={j} className="detail-image-wrapper">
+                                          <img src={img.src} alt={img.alt} />
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </>
+                    )}
+
                     {/* New structure: intro + image + sections */}
-                    {project.detailedContent.intro && (
+                    {project.detailedContent.intro && !project.detailedContent.architectureImage && (
                       <>
                         <p className="detail-paragraph" dangerouslySetInnerHTML={{ __html: formatText(project.detailedContent.intro) }}></p>
 

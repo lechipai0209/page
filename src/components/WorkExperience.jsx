@@ -31,7 +31,7 @@ function WorkExperience() {
         "Independently developed multimedia API, database schema design, business logic and frontend admin interface, fully responsible for backend development.",
         "Utilized Draw.io to visualize complex workflows, unified team development standards, reducing meeting frequency from 2 times per week to 1 time, saving 50% meeting time.",
         "Redesigned API into two-phase transfer mechanism, coordinated with mobile backup strategy, reducing data transfer failure rate by 99%.",
-        "Implemented GoAccess to automate API call log monitoring, combined with crontab scheduling for daily updates, saving 1 hour of data collection time per day."
+        "Implemented GoAccess to automate API call log monitoring, combined with crontab scheduling for daily updates, reducing data collection time from 30 minutes to 5 minutes."
       ],
       architecture: {
         src: "/arhero-architecture.png",
@@ -42,7 +42,7 @@ function WorkExperience() {
           subtitle: "Data Transfer Reliability",
           challenge: "ARhero is an AR interactive game where users can record videos, generate music and text, with massive node data transmitted to servers for review before being published to the gaming platform. The main challenge was that during peak traffic, the server couldn't handle large data transfers, causing transmission failures. Without proper mobile-side backups, this led to significant data loss.",
           solution: "I proposed a two-phase data transfer approach: First, players upload game music and text data to the backend. During this process, the mobile app temporarily stores both text and media data. Only after backend confirmation is received does the app use a separate API to transfer the video. This minimized the risk of complete data loss.",
-          result: "With mobile backup cooperation and multi-API design, we achieved a 99% data preservation rate even during API failures - either on mobile or cloud storage. This dramatically reduced previous complete data loss incidents."
+          result: "With mobile backup cooperation and multi-API design, **we achieved a 99% data preservation rate even during API failures - either on mobile or cloud storage. This dramatically reduced previous complete data loss incidents.**"
         },
         {
           subtitle: "Workflow Standardization",
@@ -57,7 +57,7 @@ function WorkExperience() {
       ],
       monitoring: {
         subtitle: "API Monitoring Automation",
-        text: "Previously, the company manually checked server logs to calculate API call counts, which was cumbersome on Ubuntu. I found GoAccess, an API traffic management package that, when embedded in the server with crontab scheduling for daily updates, **saved over 1 hour daily in data collection setup time and significantly improved data collection efficiency**.",
+        text: "Previously, the company manually checked server logs to calculate API call counts, which was cumbersome on Ubuntu. I found GoAccess, an API traffic management package that, when embedded in the server with crontab scheduling for daily updates, **reduced data collection time from 30 minutes to 5 minutes, significantly improving data collection efficiency**.",
         image: {
           src: "/goaccess.png",
           caption: "GoAccess API Traffic Monitoring: Automated daily log analysis dashboard"
@@ -80,7 +80,7 @@ function WorkExperience() {
       projectIntro: "This project provides a LINE-based online appointment and record system for dental clinics serving as a B2B solution for a dental equipment company. I independently designed API construction, cloud deployment, backend admin pages, and integrated mobile pages into LINE Front-End Framework (LINE LIFF).",
       dentalArchitecture: {
         src: "/LINEMENU.drawio.png",
-        caption: "Project Architecture: Complete system overview showing menu structure and navigation flow"
+        caption: "System Architecture Diagram: Illustrates the three-tier architecture with LINE LIFF frontend, Node.js + Express backend, and MySQL database, along with the complete navigation flow and data flow between LINE Menu structure and functional modules (authentication, appointment scheduling, product management, notification system)"
       },
       lineMenu: {
         description: "I was responsible for LINE Menu and developing menu scripts based on UI-provided designs, configuring auto-replies, menu page navigation, and external website redirects.",
@@ -154,7 +154,7 @@ function WorkExperience() {
         "獨立開發多媒體 API、資料庫架構設計、商業邏輯與前端管理介面，全權負責專案後端開發",
         "利用 Draw.io 視覺化複雜工作流程，統一團隊開發標準，會議頻率從每週 2 次降為 1 次，減少 50% 會議時間",
         "重新設計 API 為兩階段傳輸機制，配合 mobile 端備份策略，將資料傳輸失敗率降低 99%",
-        "導入 GoAccess 自動化監控 API 呼叫日誌，搭配 crontab 排程每日更新，每日節省 1 小時數據收集時間"
+        "導入 GoAccess 自動化監控 API 呼叫日誌，搭配 crontab 排程每日更新，將數據收集時間從半小時減少至 5 分鐘"
       ],
       architecture: {
         src: "/arhero-architecture.png",
@@ -165,7 +165,7 @@ function WorkExperience() {
           subtitle: "資料傳輸可靠性",
           challenge: "ARhero 是一個 AR 互動式遊戲，使用者可以自己錄製影片、生成音樂、文字以及大量節點資料透過 API 傳遞到伺服器進行審核，最終上架至遊戲平台。我在這個專案遇到的主要問題是，當**尖峰流量時伺服器很容易無法進行大量資料的傳輸**，造成**資料傳遞失敗**，而 mobile 端如果未備份很容易造成**大量的資料丟失**。",
           solution: "我提出**分段式的資料傳遞方式**：第一階段玩家必須先把遊戲的音樂以及文字資料先傳遞到後端，在等待的過程中，**mobile 端需要先暫存文字以及影音資料**。並等待後端確認接收到資料後，才利用另一支 API 傳遞影片，這樣**降低資料全部丟失的風險**。",
-          result: "在與 mobile 端 backup 的協助、以及多 API 設計的幫助下，**99% 以上的情況**，**即使在 API 傳送失敗的狀況下，仍能保證文字資料與影片資料至少存在 mobile 或是雲端上面**，**大幅減少之前資料完全丟失的情況**。"
+          result: "**在與 mobile 端 backup 的協助、以及多 API 設計的幫助下，99% 以上的情況，即使在 API 傳送失敗的狀況下，仍能保證文字資料與影片資料至少存在 mobile 或是雲端上面，大幅減少之前資料完全丟失的情況。**"
         },
         {
           subtitle: "工作流程標準化",
@@ -180,7 +180,7 @@ function WorkExperience() {
       ],
       monitoring: {
         subtitle: "API 監控自動化",
-        text: "另外，以往公司主要是直接去 server 裡面看 log，計算 API 呼叫次數，在 Ubuntu 上面計算 API 流量的方式過於繁雜。我找到一個 API 流量管理的套件 GoAccess，這個套件只要嵌入在 server 內部，利用 crontab 排程每日更新流量紀錄的靜態檔案，**就可以節省1小時(每日)以上 以上設定資料蒐集的過程和設定的時間，大幅提升數據蒐集的效率**。",
+        text: "另外，以往公司主要是直接去 server 裡面看 log，計算 API 呼叫次數，在 Ubuntu 上面計算 API 流量的方式過於繁雜。我找到一個 API 流量管理的套件 GoAccess，這個套件只要嵌入在 server 內部，利用 crontab 排程每日更新流量紀錄的靜態檔案，**將數據收集時間從半小時減少至 5 分鐘，大幅提升數據蒐集的效率**。",
         image: {
           src: "/goaccess.png",
           caption: "GoAccess API 流量監控：自動化每日日誌分析儀表板"
@@ -203,7 +203,7 @@ function WorkExperience() {
       projectIntro: "這個專案為一間醫材公司提供以 LINE 為主體的線上預約及預約紀錄系統，使用對象為各牙醫醫療診所。在這個專案中，我獨立設計了 API 建置、雲端部署、後台 admin 頁面以及將 mobile 頁面放入 LINE Front-End Framework (LINE LIFF) 的設計。",
       dentalArchitecture: {
         src: "/LINEMENU.drawio.png",
-        caption: "專案架構：完整系統概覽，顯示選單結構與導航流程"
+        caption: "系統架構圖：展示 LINE LIFF 前端、Node.js + Express 後端、MySQL 資料庫三層式架構，以及 LINE Menu 選單結構與各功能模組（帳號認證、預約排程、產品管理、通知系統）之間的完整導航流程與資料流向"
       },
       lineMenu: {
         description: "我負責 LINE Menu，編寫 menu 腳本，依據 UI 提供的美術圖，設定為應有的自動回復、Menu 頁面跳轉或是導向至外部網站。",

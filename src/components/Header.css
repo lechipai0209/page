@@ -69,6 +69,71 @@
   border-bottom-color: #78909c;
 }
 
+/* GitHub link tooltip */
+.github-link {
+  position: relative;
+}
+
+.github-link::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(44, 62, 80, 0.95);
+  color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  white-space: normal;
+  width: 300px;
+  text-align: center;
+  line-height: 1.5;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.github-link::after {
+  content: '';
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-bottom-color: rgba(44, 62, 80, 0.95);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.github-link:hover::before,
+.github-link:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile responsiveness for tooltip */
+@media (max-width: 768px) {
+  .github-link::before {
+    width: 250px;
+    font-size: 0.8rem;
+    padding: 0.7rem 0.9rem;
+    left: 0;
+    transform: translateX(0);
+  }
+
+  .github-link::after {
+    left: 20px;
+    transform: translateX(0);
+  }
+}
+
 .icon {
   font-size: 0.95rem;
 }
