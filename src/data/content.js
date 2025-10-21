@@ -605,6 +605,7 @@ console.log("haha");`,
   buttons: {
     en: {
       viewBlog: "View Blog",
+      viewGithub: "View on GitHub",
       viewPublication: "View Publication",
       systemArchitecture: "System Architecture",
       workflow: "Workflow Diagram",
@@ -615,6 +616,7 @@ console.log("haha");`,
     },
     zh: {
       viewBlog: "查看部落格",
+      viewGithub: "查看 GitHub",
       viewPublication: "查看論文",
       systemArchitecture: "系統架構",
       workflow: "工作流程圖",

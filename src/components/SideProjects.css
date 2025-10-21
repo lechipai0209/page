@@ -64,21 +64,6 @@
   letter-spacing: -0.2px;
 }
 
-.project-name-link {
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.2s ease;
-  display: inline-block;
-}
-
-.project-name-link:hover {
-  color: #3498db;
-}
-
-.project-name-link:hover .project-name {
-  color: #3498db;
-}
-
 .project-description {
   color: #546e7a;
   margin: 0;

@@ -36,27 +36,15 @@ function SideProjects() {
               <div className="card-header" onClick={() => toggleExpand(index)}>
                 <div className="header-left">
                   <div className="title-row">
-                    {project.link && project.name !== 'Medium Technical Blog' && project.name !== 'Medium 技術部落格' ? (
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="project-name-link"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <h3 className="project-name">{project.name}</h3>
-                      </a>
-                    ) : (
-                      <h3 className="project-name">{project.name}</h3>
-                    )}
-                    {project.status && project.name !== 'Medium Technical Blog' && project.name !== 'Medium 技術部落格' && (
+                    <h3 className="project-name">{project.name}</h3>
+                    {project.status && (
                       <span className={`status-badge ${project.status.toLowerCase()}`}>
                         {project.status}
                       </span>
                     )}
                   </div>
                   <p className="project-description">{project.description}</p>
-                  {project.link && (project.name === 'Medium Technical Blog' || project.name === 'Medium 技術部落格') && (
+                  {project.link && (
                     <a
                       href={project.link}
                       target="_blank"
@@ -64,7 +52,9 @@ function SideProjects() {
                       className="project-link-header"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      {buttons.viewBlog} →
+                      {project.name === 'Medium Technical Blog' || project.name === 'Medium 技術部落格'
+                        ? buttons.viewBlog
+                        : buttons.viewGithub} →
                     </a>
                   )}
                 </div>
